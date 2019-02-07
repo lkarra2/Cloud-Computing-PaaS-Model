@@ -20,7 +20,7 @@ package main.java
 		40000 length of instructions,
 		300 kb input filesize,
 		400 kb output filesize,
-		1 core cpu
+		quad-core cpu
 		utilization model to full
 	4. Virtual Machines:
 		40 Virtual machines,
@@ -108,15 +108,12 @@ object CloudSimulation1 {
       // Fifth step: Create one Cloudlet
       val cloudletList = new util.ArrayList[Cloudlet]
       // Cloudlet properties
-      val id = 0
-      val length = 40000
-      val fileSize = 300
-      val outputSize = 400
+      val length = config.getInt("cloudlet.length")
+      val fileSize = config.getInt("cloudlet.fileSize")
+      val outputSize = config.getInt("cloudlet.outputSize")
+      var cloudletId = config.getInt("cloudlet.cloudletId")
       val utilizationModel = new UtilizationModelFull
-      var cloudletId = 0
-      while ( {
-        cloudletId < 40
-      }) {
+      while ( cloudletId < 40) {
         val cloudlet = new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel)
         cloudlet.setUserId(brokerId)
         // add the cloudlet to the list
@@ -126,6 +123,9 @@ object CloudSimulation1 {
           cloudletId += 1; cloudletId - 1
         }
       }
+
+      //cloudletList = foldLeft(cloudletList.add(new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel)), 1, 40 )
+
       //cloudlet.setVmId(vmid);
       // submit cloudlet list to the broker
       broker.submitCloudletList(cloudletList)
@@ -156,23 +156,22 @@ object CloudSimulation1 {
     // 2. A Machine contains one or more PEs or CPUs/Cores.
     // In this example, it will have only one core.
     val peList = new util.ArrayList[Pe]
-    val mips = 1000
+    val mips = config.getInt("datacenter.mips")
     // 3. Create PEs and add these into the list.
     //for a quad-core machine, a list of 4 PEs is required:
     peList.add(new Pe(0, new PeProvisionerSimple(mips))) // need to store Pe id and MIPS Rating
-
     peList.add(new Pe(1, new PeProvisionerSimple(mips)))
     peList.add(new Pe(2, new PeProvisionerSimple(mips)))
     peList.add(new Pe(3, new PeProvisionerSimple(mips)))
     // 4. Create Host with its id and list of PEs and add them to the list
     // of machines
-    val ram = 8000
+    val ram = config.getInt("datacenter.ram")
     // host memory (MB)
-    val storage = 1000000
+    val storage = config.getInt("datacenter.storage")
     // host storage
-    val bw = 8000
-    hostList.add(new Host(0, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList))) // This is our machine
+    val bw = config.getInt("datacenter.bw")
 
+    hostList.add(new Host(0, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList))) // This is our machine
     hostList.add(new Host(1, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
     hostList.add(new Host(2, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
     hostList.add(new Host(3, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
@@ -180,21 +179,21 @@ object CloudSimulation1 {
     // properties of a data center: architecture, OS, list of
     // Machines, allocation policy: time- or space-shared, time zone
     // and its price (G$/Pe time unit).
-    val arch = "x86"
+    val arch = config.getString("datacenter.arch")
     // system architecture
-    val os = "Linux"
+    val os = config.getString("datacenter.os")
     // operating system
-    val vmm = "Xen"
-    val time_zone = 10.0
+    val vmm = config.getString("datacenter.vmm")
+    val time_zone = config.getInt("datacenter.time_zone")
     // time zone this resource located
-    val cost = 3.0
+    val cost = config.getDouble("datacenter.cost")
     // the cost of using processing in this resource
-    val costPerMem = 1.0
+    val costPerMem = config.getDouble("datacenter.costPerMem")
     // the cost of using memory in this resource
-    val costPerStorage = 0.05
+    val costPerStorage = config.getDouble("datacenter.costPerStorage")
     // the cost of using storage in this
     // resource
-    val costPerBw = 0.10
+    val costPerBw = config.getDouble("datacenter.costPerBw")
     // the cost of using bw in this resource
     val storageList = new util.LinkedList[Storage]
     // we are not adding SAN

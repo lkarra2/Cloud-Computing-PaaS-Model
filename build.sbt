@@ -7,5 +7,5 @@ scalaVersion := "2.12.8"
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.2",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
-  "org.apache.commons" % "commons-math3" % "3.2",
+  "org.apache.commons" % "commons-math3" % "3.2"
 )
