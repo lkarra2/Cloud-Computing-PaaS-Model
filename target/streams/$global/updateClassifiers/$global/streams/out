@@ -371,6 +371,21 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [runtime->compile]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [runtime->compile(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [runtime->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default]
+[debug] sbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.12;3.0.5 {test=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.12;3.0.5
+[debug] 	found org.scalatest#scalatest_2.12;3.0.5 in sbt-chain
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
@@ -387,6 +402,17 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.scalactic#scalactic_2.12;3.0.5 {test=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.scalactic#scalactic_2.12;3.0.5
+[debug] 	found org.scalactic#scalactic_2.12;3.0.5 in sbt-chain
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test->compile]
@@ -411,6 +437,17 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test->compile]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.12;1.0.6 {test=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], scala-tool=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.12;1.0.6
+[debug] 	found org.scala-lang.modules#scala-xml_2.12;1.0.6 in sbt-chain
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test->compile]
@@ -934,6 +971,18 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [runtime->compile]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [runtime->compile(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [runtime->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
@@ -950,6 +999,14 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test->compile]
@@ -974,6 +1031,14 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test->compile]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test->compile]
@@ -1004,6 +1069,18 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->master]
 [debug] == resolving dependencies for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 [optional]
 [debug] == resolving dependencies for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 [provided]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->default]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->default(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->compile]
@@ -1020,6 +1097,14 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->compile(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->master(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test-internal->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test-internal->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.apache.commons#commons-math3;3.2 [test-internal->compile]
@@ -1044,6 +1129,14 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test-internal->compile]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test-internal->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe#config;1.3.2 [test-internal->master]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->master(compile)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->runtime]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile(*)]
+[debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test-internal->default]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test-internal->runtime]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->com.typesafe.scala-logging#scala-logging_2.12;3.9.2 [test-internal->compile]
@@ -1093,9 +1186,6 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [scala-tool->compile(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang#scala-library;2.12.8 [scala-tool->master]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->compile]
-[debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.12;1.0.6 {scala-tool=[compile, runtime(*), master(compile), runtime, compile(*), master]}
-[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.12;1.0.6
-[debug] 	found org.scala-lang.modules#scala-xml_2.12;1.0.6 in sbt-chain
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->runtime(*)]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->compile]
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->master(compile)]
@@ -1133,112 +1223,30 @@
 [debug] == resolving dependencies default#lakshmimanaswi_karra_cs441_hw1$sources;0.1->jline#jline;2.14.6 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-math3;3.2!commons-math3.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.2!config.jar(src)
-[debug] no default ivy user dir defined: set to /Users/manaswikarra/.ivy2
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.scala-logging#scala-logging_2.12;3.9.2!scala-logging_2.12.jar(src)
-[debug] no default ivy user dir defined: set to /Users/manaswikarra/.ivy2
-[debug] no default ivy user dir defined: set to /Users/manaswikarra/.ivy2
-[debug] no default ivy user dir defined: set to /Users/manaswikarra/.ivy2
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
-[debug] no default ivy user dir defined: set to /Users/manaswikarra/.ivy2
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src)
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default ivy user dir defined: set to /Users/manaswikarra/.ivy2
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/manaswikarra/.ivy2/cache
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/manaswikarra/.ivy2/cache
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/manaswikarra/.ivy2/cache
-[debug] no default cache defined: set to /Users/manaswikarra/.ivy2/cache
-[debug] no default cache defined: set to /Users/manaswikarra/.ivy2/cache
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /Users/manaswikarra/.ivy2/cache
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (40ms)
-[debug] settings loaded (43ms)
-[debug] 	default cache: /Users/manaswikarra/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	default cache: /Users/manaswikarra/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (44ms)
-[debug] 	default cache: /Users/manaswikarra/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (37ms)
-[debug] 	default cache: /Users/manaswikarra/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (45ms)
-[debug] 	default cache: /Users/manaswikarra/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/manaswikarra/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
+[debug] 		tried /Users/manaswikarra/.ivy2/local/org.scalactic/scalactic_2.12/3.0.5/srcs/scalactic_2.12-sources.jar
+[debug] 		tried /Users/manaswikarra/.ivy2/local/org.scalatest/scalatest_2.12/3.0.5/srcs/scalatest_2.12-sources.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
+[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.8!scala-compiler.jar(src)
-[debug] settings loaded (47ms)
-[debug] 	default cache: /Users/manaswikarra/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] :: resolution report :: resolve 504ms :: artifacts dl 62ms
+[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
+[info] 	[SUCCESSFUL ] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src) (362ms)
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
+[info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src) (538ms)
+[debug] :: resolution report :: resolve 134ms :: artifacts dl 544ms
 [debug] 	report for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 compile produced in /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/resolution-cache/reports/default-lakshmimanaswi_karra_cs441_hw1$sources-compile.xml
 [debug] 	report for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 runtime produced in /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/resolution-cache/reports/default-lakshmimanaswi_karra_cs441_hw1$sources-runtime.xml
 [debug] 	report for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 test produced in /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/resolution-cache/reports/default-lakshmimanaswi_karra_cs441_hw1$sources-test.xml
@@ -1250,4 +1258,4 @@
 [debug] 	report for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 plugin produced in /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/resolution-cache/reports/default-lakshmimanaswi_karra_cs441_hw1$sources-plugin.xml
 [debug] 	report for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 pom produced in /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/resolution-cache/reports/default-lakshmimanaswi_karra_cs441_hw1$sources-pom.xml
 [debug] 	report for default#lakshmimanaswi_karra_cs441_hw1$sources;0.1 scala-tool produced in /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/resolution-cache/reports/default-lakshmimanaswi_karra_cs441_hw1$sources-scala-tool.xml
-[debug] 	resolve done (504ms resolve - 62ms download)
+[debug] 	resolve done (134ms resolve - 544ms download)

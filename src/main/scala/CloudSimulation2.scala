@@ -1,5 +1,3 @@
-package main.java
-
 /*
  * Title:        CloudSim Toolkit
  * Description:  CloudSim (Cloud Simulation) Toolkit for Modeling and Simulation
@@ -31,30 +29,28 @@ package main.java
 		Timeshared scheduler for cloudlets execution
  */
 
-import org.cloudbus.cloudsim._
-import org.cloudbus.cloudsim.core.CloudSim
-import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple
-import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple
-import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple
 import java.text.DecimalFormat
 import java.util
-import java.util.{ArrayList, Calendar, LinkedList, List}
+import java.util.Calendar
 
 import com.typesafe.config.{Config, ConfigFactory}
+import org.cloudbus.cloudsim._
+import org.cloudbus.cloudsim.core.CloudSim
+import org.cloudbus.cloudsim.provisioners.{BwProvisionerSimple, PeProvisionerSimple, RamProvisionerSimple}
 
 
 /**
   * A simple example showing how to create a datacenter with one host and run one
   * cloudlet on it.
   */
-object CloudSimulation1 {
+object CloudSimulation2 {
   /** The cloudlet list. */
-    private var cloudletList = null
+  private var cloudletList = null
   /** The vmlist. */
   private var vmlist = null
 
   //Create instance of config
-  val config: Config = ConfigFactory.load("settings1.conf")
+  val config: Config = ConfigFactory.load("settings2.conf")
 
   /**
     * Creates main() to run this example.
@@ -101,17 +97,17 @@ object CloudSimulation1 {
         // add the VM to the vmList
         vmlist.add(vm)
       })
-//      var vmId = 0
-//      while (vmId < 40) {
-//        val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared)
-//        // add the VM to the vmList
-//        vmlist.add(vm)
-//
-//        {
-//          vmId += 1; vmId - 1
-//        }
-//      }
-//
+      //      var vmId = 0
+      //      while (vmId < 40) {
+      //        val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared)
+      //        // add the VM to the vmList
+      //        vmlist.add(vm)
+      //
+      //        {
+      //          vmId += 1; vmId - 1
+      //        }
+      //      }
+      //
       // submit vm list to the broker
       broker.submitVmList(vmlist)
       // Fifth step: Create one Cloudlet
@@ -122,25 +118,24 @@ object CloudSimulation1 {
       val outputSize = config.getInt("cloudlet.outputSize")
       var cloudletId = config.getInt("cloudlet.cloudletId")
       val utilizationModel = new UtilizationModelFull
-      val utModel = new UtilizationModelStochastic()
       val cloudletCount = config.getInt("cloudlet.count")
       val cloudletRange = 0 until cloudletCount
       range.foreach(cloudletId => {
-        val cloudlet = new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utModel, utModel, utModel)
+        val cloudlet = new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel)
         cloudlet.setUserId(brokerId)
         // add the cloudlet to the list
         cloudletList.add(cloudlet)
       })
-//      while ( cloudletId < 40) {
-//        val cloudlet = new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel)
-//        cloudlet.setUserId(brokerId)
-//        // add the cloudlet to the list
-//        cloudletList.add(cloudlet)
-//
-//        {
-//          cloudletId += 1; cloudletId - 1
-//        }
-//      }
+      //      while ( cloudletId < 40) {
+      //        val cloudlet = new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel)
+      //        cloudlet.setUserId(brokerId)
+      //        // add the cloudlet to the list
+      //        cloudletList.add(cloudlet)
+      //
+      //        {
+      //          cloudletId += 1; cloudletId - 1
+      //        }
+      //      }
 
       //cloudlet.setVmId(vmid);
       // submit cloudlet list to the broker
@@ -174,9 +169,11 @@ object CloudSimulation1 {
     val peList = new util.ArrayList[Pe]
     val mips = config.getInt("datacenter.mips")
     // 3. Create PEs and add these into the list.
-    //for a dual-core machine, a list of 4 PEs is required:
+    //for a quad-core machine, a list of 4 PEs is required:
     peList.add(new Pe(0, new PeProvisionerSimple(mips))) // need to store Pe id and MIPS Rating
     peList.add(new Pe(1, new PeProvisionerSimple(mips)))
+    peList.add(new Pe(2, new PeProvisionerSimple(mips)))
+    peList.add(new Pe(3, new PeProvisionerSimple(mips)))
     // 4. Create Host with its id and list of PEs and add them to the list
     // of machines
     val ram = config.getInt("datacenter.ram")
@@ -185,10 +182,10 @@ object CloudSimulation1 {
     // host storage
     val bw = config.getInt("datacenter.bw")
 
-    hostList.add(new Host(0, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList))) // This is our machine
-    hostList.add(new Host(1, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
-    hostList.add(new Host(2, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
-    hostList.add(new Host(3, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
+    hostList.add(new Host(0, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerTimeShared(peList))) // This is our machine
+    hostList.add(new Host(1, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerTimeShared(peList)))
+    hostList.add(new Host(2, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerTimeShared(peList)))
+    hostList.add(new Host(3, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerTimeShared(peList)))
     // 5. Create a DatacenterCharacteristics object that stores the
     // properties of a data center: architecture, OS, list of
     // Machines, allocation policy: time- or space-shared, time zone
