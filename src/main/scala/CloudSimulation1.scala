@@ -1,4 +1,4 @@
-package main.java
+package main.scala
 
 /*
  * Title:        CloudSim Toolkit
@@ -7,28 +7,6 @@ package main.java
  * Licence:      GPL - http://www.gnu.org/copyleft/gpl.html
  *
  * Copyright (c) 2009, The University of Melbourne, Australia
- *
-   1. One Datacenter:
-   		Four Host,
-  			Four cores (with 1000 mips each core),
-   			8 GB RAM,
-   			100 GB storage (i.e. 100000 MB),
-   			1 mbps (i.e. 8000 Kbits/s network bandwidth measured as Kbits/s)
-	2. One DataCenterBroker
-	3. CloudLets:
-		40 Cloudlets/tasks/workload,
-		40000 length of instructions,
-		300 kb input filesize,
-		400 kb output filesize,
-		quad-core cpu
-		utilization model to full
-	4. Virtual Machines:
-		40 Virtual machines,
-		20 GB Storage disk,
-		2 GB RAM,
-		1 vCPU with 1000 mips CPU speed,
-		1000 kbits/s Bandwidth,
-		Timeshared scheduler for cloudlets execution
  */
 
 import org.cloudbus.cloudsim._
@@ -38,9 +16,10 @@ import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple
 import java.text.DecimalFormat
 import java.util
-import java.util.{ArrayList, Calendar, LinkedList, List}
+import java.util.Calendar
 
 import com.typesafe.config.{Config, ConfigFactory}
+import org.slf4j.LoggerFactory
 
 
 /**
@@ -48,8 +27,10 @@ import com.typesafe.config.{Config, ConfigFactory}
   * cloudlet on it.
   */
 object CloudSimulation1 {
+  val logger = LoggerFactory.getLogger(getClass)
+
   /** The cloudlet list. */
-    private var cloudletList = null
+  private var cloudletList = null
   /** The vmlist. */
   private var vmlist = null
 
@@ -62,7 +43,7 @@ object CloudSimulation1 {
     * @param args the args
     */
   @SuppressWarnings(Array("unused")) def main(args: Array[String]): Unit = {
-    Log.printLine("Starting CloudSimExample1...")
+    logger.debug("Starting CloudSimulation1...")
     try { // First step: Initialize the CloudSim package. It should be called
       // before creating any entities.
       val num_user = config.getInt("setting.numuser")
@@ -74,45 +55,17 @@ object CloudSimulation1 {
       // Second step: Create Datacenters
       // Datacenters are the resource providers in CloudSim. We need at
       // list one of them to run a CloudSim simulation
-      val datacenter0 = createDatacenter("Datacenter_0")
+
+      val datacenter1 = createDatacenter("datacenter1")
+      val datacenter2 = createDatacenter("datacenter2")
+      val datacenter3 = createDatacenter("datacenter3")
+      val datacenter4 = createDatacenter("datacenter4")
       // Third step: Create Broker
       val broker = createBroker
       val brokerId = broker.getId
 
-      val vmCount = config.getInt("vm.count")
-      // Fourth step: Create one virtual machine
-      val vmlist = new util.ArrayList[Vm]
-      // VM description
-      val vmid = config.getInt("vm.vmid")
-      val mips = config.getInt("vm.mips")
-      val size = config.getInt("vm.size")
-      // image size (MB)
-      val ram = config.getInt("vm.ram")
-      // vm memory (MB)
-      val bw = config.getInt("vm.bw")
-      val pesNumber = config.getInt("vm.pesNumber")
-      // number of cpus
-      val vmm = config.getString("vm.vmm")
-      // VMM name
-      // create VM
-      val range = 0 until vmCount
-      range.foreach(vmId => {
-        val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared)
-        // add the VM to the vmList
-        vmlist.add(vm)
-      })
-//      var vmId = 0
-//      while (vmId < 40) {
-//        val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared)
-//        // add the VM to the vmList
-//        vmlist.add(vm)
-//
-//        {
-//          vmId += 1; vmId - 1
-//        }
-//      }
-//
-      // submit vm list to the broker
+
+      val (vmlist: util.ArrayList[Vm], pesNumber: Int, range: Range) = createVmList(brokerId)
       broker.submitVmList(vmlist)
       // Fifth step: Create one Cloudlet
       val cloudletList = new util.ArrayList[Cloudlet]
@@ -122,6 +75,7 @@ object CloudSimulation1 {
       val outputSize = config.getInt("cloudlet.outputSize")
       var cloudletId = config.getInt("cloudlet.cloudletId")
       val utilizationModel = new UtilizationModelFull
+
       val utModel = new UtilizationModelStochastic()
       val cloudletCount = config.getInt("cloudlet.count")
       val cloudletRange = 0 until cloudletCount
@@ -131,17 +85,6 @@ object CloudSimulation1 {
         // add the cloudlet to the list
         cloudletList.add(cloudlet)
       })
-//      while ( cloudletId < 40) {
-//        val cloudlet = new Cloudlet(cloudletId, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel)
-//        cloudlet.setUserId(brokerId)
-//        // add the cloudlet to the list
-//        cloudletList.add(cloudlet)
-//
-//        {
-//          cloudletId += 1; cloudletId - 1
-//        }
-//      }
-
       //cloudlet.setVmId(vmid);
       // submit cloudlet list to the broker
       broker.submitCloudletList(cloudletList)
@@ -151,11 +94,11 @@ object CloudSimulation1 {
       //Final step: Print results when simulation is over
       val finalCloudletExecutionResults = broker.getCloudletReceivedList
       printCloudletList(finalCloudletExecutionResults)
-      Log.printLine("CloudSimExample1 finished!")
+      logger.debug("CloudSimulation1 finished!")
     } catch {
       case e: Exception =>
         e.printStackTrace()
-        Log.printLine("Unwanted errors happen")
+        logger.debug("Unwanted errors happen")
     }
   }
 
@@ -165,25 +108,25 @@ object CloudSimulation1 {
     * @param name the name
     * @return the datacenter
     */
-  private def createDatacenter(name: String) = { // Here are the steps needed to create a PowerDatacenter:
+  def createDatacenter(name: String) = { // Here are the steps needed to create a PowerDatacenter:
     // 1. We need to create a list to store
     // our machine
     val hostList = new util.ArrayList[Host]
     // 2. A Machine contains one or more PEs or CPUs/Cores.
     // In this example, it will have only one core.
     val peList = new util.ArrayList[Pe]
-    val mips = config.getInt("datacenter.mips")
+    val mips = config.getInt(name+".mips")
     // 3. Create PEs and add these into the list.
     //for a dual-core machine, a list of 4 PEs is required:
     peList.add(new Pe(0, new PeProvisionerSimple(mips))) // need to store Pe id and MIPS Rating
     peList.add(new Pe(1, new PeProvisionerSimple(mips)))
     // 4. Create Host with its id and list of PEs and add them to the list
     // of machines
-    val ram = config.getInt("datacenter.ram")
+    val ram = config.getInt(name+".ram")
     // host memory (MB)
-    val storage = config.getInt("datacenter.storage")
+    val storage = config.getInt(name+".storage")
     // host storage
-    val bw = config.getInt("datacenter.bw")
+    val bw = config.getInt(name+".bw")
 
     hostList.add(new Host(0, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList))) // This is our machine
     hostList.add(new Host(1, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
@@ -193,21 +136,21 @@ object CloudSimulation1 {
     // properties of a data center: architecture, OS, list of
     // Machines, allocation policy: time- or space-shared, time zone
     // and its price (G$/Pe time unit).
-    val arch = config.getString("datacenter.arch")
+    val arch = config.getString(name+".arch")
     // system architecture
-    val os = config.getString("datacenter.os")
+    val os = config.getString(name+".os")
     // operating system
-    val vmm = config.getString("datacenter.vmm")
-    val time_zone = config.getInt("datacenter.time_zone")
+    val vmm = config.getString(name+".vmm")
+    val time_zone = config.getInt(name+".time_zone")
     // time zone this resource located
-    val cost = config.getDouble("datacenter.cost")
+    val cost = config.getDouble(name+".cost")
     // the cost of using processing in this resource
-    val costPerMem = config.getDouble("datacenter.costPerMem")
+    val costPerMem = config.getDouble(name+".costPerMem")
     // the cost of using memory in this resource
-    val costPerStorage = config.getDouble("datacenter.costPerStorage")
+    val costPerStorage = config.getDouble(name+".costPerStorage")
     // the cost of using storage in this
     // resource
-    val costPerBw = config.getDouble("datacenter.costPerBw")
+    val costPerBw = config.getDouble(name+".costPerBw")
     // the cost of using bw in this resource
     val storageList = new util.LinkedList[Storage]
     // we are not adding SAN
@@ -225,11 +168,45 @@ object CloudSimulation1 {
   }
 
   /**
+    * Creates the VmList.
+    *
+    * @param brokerId the BrokerId
+    * @return the vmlist
+    */
+  def createVmList (brokerId: Int) = {
+    val vmCount = config.getInt("vm.count")
+    // Fourth step: Create one virtual machine
+    val vmlist = new util.ArrayList[Vm]
+    // VM description
+    val vmid = config.getInt("vm.vmid")
+    val mips = config.getInt("vm.mips")
+    val size = config.getInt("vm.size")
+    // image size (MB)
+    val ram = config.getInt("vm.ram")
+    // vm memory (MB)
+    val bw = config.getInt("vm.bw")
+    val pesNumber = config.getInt("vm.pesNumber")
+    // number of cpus
+    val vmm = config.getString("vm.vmm")
+    // VMM name
+    // create VM
+    val range = 0 until vmCount
+    range.foreach(vmId => {
+      val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared)
+      // add the VM to the vmList
+      vmlist.add(vm)
+    })
+
+// submit vm list to the broker
+    (vmlist, pesNumber, range)
+  }
+
+  /**
     * Creates the broker.
     *
     * @return the datacenter broker
     */
-  private def createBroker: DatacenterBroker = {
+  def createBroker: DatacenterBroker = {
     try {
       val broker = new DatacenterBroker("Broker")
       return broker
@@ -251,15 +228,16 @@ object CloudSimulation1 {
     val indent = "    "
     Log.printLine()
     Log.printLine("========== OUTPUT ==========")
-    Log.printLine("Cloudlet ID" + indent + "STATUS" + indent + "Data center ID" + indent + "VM ID" + indent + "Time" + indent + "Start Time" + indent + "Finish Time")
+    Log.printLine("Cloudlet ID" + indent + "STATUS" + indent + "Data center ID" + indent + "VM ID" + indent + "Time" + indent + "Start Time" + indent + "Finish Time" + indent + "Cost")
     val dft = new DecimalFormat("###.##")
     val range = 0 until size
     range.foreach(i => {
       val cloudlet = list.get(i)
+      val ourCost = cloudlet.getProcessingCost + cloudlet.
       Log.print(indent + cloudlet.getCloudletId + indent + indent)
       if (cloudlet.getCloudletStatus == Cloudlet.SUCCESS) {
         Log.print("SUCCESS")
-        Log.printLine(indent + indent + cloudlet.getResourceId + indent + indent + indent + cloudlet.getVmId + indent + indent + dft.format(cloudlet.getActualCPUTime) + indent + indent + dft.format(cloudlet.getExecStartTime) + indent + indent + dft.format(cloudlet.getFinishTime))
+        Log.printLine(indent + indent + cloudlet.getResourceId + indent + indent + indent + cloudlet.getVmId + indent + indent + dft.format(cloudlet.getActualCPUTime) + indent + indent + dft.format(cloudlet.getExecStartTime) + indent + indent + dft.format(cloudlet.getFinishTime) + indent + indent + ((cloudlet.getCostPerSec)*(cloudlet.getActualCPUTime())))
       }
     })
   }

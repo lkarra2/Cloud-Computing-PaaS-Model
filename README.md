@@ -5,8 +5,7 @@
 
 # Cloud Computing using PaaS service model 
 
-This project consists of 
- 2 Cloud simulations
+This project consists of 2 Cloud simulations. Each 
  each using a different policy and specs
  cloudlets/jobs are same 
  
@@ -77,9 +76,10 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Cloudsim](http://www.cloudbus.org/cloudsim/) - CloudSim (Cloud Simulation) Toolkit for Modeling and Simulation of Clouds
+* [Lightbend](https://github.com/lightbend/config) - Configuration library
+* [SLF4J](https://www.slf4j.org/) - Logging Framework 
+* [org.cloudbus.cloudsim.Log](~/lib/cloudsim-3.0.3.jar!/org/cloudbus/cloudsim/Log.class) - Printing Data logged by CloudSim 
 
 ## Contributing
 
