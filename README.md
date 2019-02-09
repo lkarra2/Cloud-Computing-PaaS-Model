@@ -5,11 +5,55 @@
 
 # Cloud Computing using PaaS service model 
 
-This project consists of 2 Cloud simulations. Each 
- each using a different policy and specs
- cloudlets/jobs are same 
- 
-Define each policy?
+This project consists of 2 Cloud simulations. Each using a different policy with different specifications.
+In order to compare and contrast the differing policies, the cloudlet specifications have been kept constant. 
+The following are the policies for each simulation
+
+Simulation 1:
+1. Four Datacenters: 
+    - Four Host, 
+        - Four cores with 1000 mips each core, 
+        - 8 GB RAM, 
+        - 1000 GB storage i.e. 100000 MB, 
+        - 1 mbps i.e. 8000 Kbits/s network bandwidth measured as Kbits/s
+2. One DataCenterBroker
+3. CloudLets:
+    40 Cloudlets/tasks/workload, 
+    40000 length of instructions, 
+    300 kb input filesize, 
+    400 kb output filesize, 
+    1 core cpu
+    Utilization model to full
+4. Virtual Machines: 
+    40 Virtual machines, 
+    20 GB Storage disk, 
+    2 GB RAM, 
+    1 vCPU with 1000 mips CPU speed, 
+    1000 kbits/s Bandwidth, 
+    Timeshared scheduler for cloudlets execution
+
+Simulation 2:
+1. One Datacenter: 
+    Four Host, 
+        Four cores with 1000 mips each core, 
+        8 GB RAM, 100 GB storage i.e. 100000 MB, 
+        1 mbps i.e. 8000 Kbits/s network bandwidth measured as Kbits/s
+2. One DataCenterBroker
+3. CloudLets:
+    40 Cloudlets/tasks/workload, 
+    40000 length of instructions, 
+    300 kb input filesize, 
+    400 kb output filesize, 
+    1 core cpu
+    Utilization model to full
+4. Virtual Machines: 
+    40 Virtual machines, 
+    20 GB Storage disk, 
+    2 GB RAM, 
+    1 vCPU with 1000 mips CPU speed, 
+    1000 kbits/s Bandwidth, 
+    Timeshared scheduler for cloudlets execution
+
 
 ## Getting Started
 

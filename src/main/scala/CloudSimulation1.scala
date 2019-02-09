@@ -17,7 +17,7 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple
 import java.text.DecimalFormat
 import java.util
 import java.util.Calendar
-
+import scala.collection.JavaConversions._
 import com.typesafe.config.{Config, ConfigFactory}
 import org.slf4j.LoggerFactory
 
@@ -28,6 +28,7 @@ import org.slf4j.LoggerFactory
   */
 object CloudSimulation1 {
   val logger = LoggerFactory.getLogger(getClass)
+  val inst:CostCalculation = new CostCalculation
 
   /** The cloudlet list. */
   private var cloudletList = null
@@ -143,6 +144,7 @@ object CloudSimulation1 {
     val vmm = config.getString(name+".vmm")
     val time_zone = config.getInt(name+".time_zone")
     // time zone this resource located
+
     val cost = config.getDouble(name+".cost")
     // the cost of using processing in this resource
     val costPerMem = config.getDouble(name+".costPerMem")
@@ -155,8 +157,13 @@ object CloudSimulation1 {
     val storageList = new util.LinkedList[Storage]
     // we are not adding SAN
     // devices by now
+
+
     val characteristics = new DatacenterCharacteristics(arch, os, vmm, hostList, time_zone, cost, costPerMem, costPerStorage, costPerBw)
     // 6. Finally, we need to create a PowerDatacenter object.
+
+    inst.monthlyCost(characteristics, ram, storage, bw)
+
     try {
       val datacenter = new Datacenter(name, characteristics, new VmAllocationPolicySimple(hostList), storageList, 0)
       datacenter
@@ -224,21 +231,27 @@ object CloudSimulation1 {
     */
   private def printCloudletList(list: util.List[_<:Cloudlet]): Unit = {
     val size = list.size
-    var cloudlet = null
+    //var cloudlet = null
     val indent = "    "
     Log.printLine()
     Log.printLine("========== OUTPUT ==========")
     Log.printLine("Cloudlet ID" + indent + "STATUS" + indent + "Data center ID" + indent + "VM ID" + indent + "Time" + indent + "Start Time" + indent + "Finish Time" + indent + "Cost")
     val dft = new DecimalFormat("###.##")
+    val listCost = new util.ArrayList[Double]()
     val range = 0 until size
     range.foreach(i => {
       val cloudlet = list.get(i)
-      val ourCost = cloudlet.getProcessingCost + cloudlet.
       Log.print(indent + cloudlet.getCloudletId + indent + indent)
       if (cloudlet.getCloudletStatus == Cloudlet.SUCCESS) {
         Log.print("SUCCESS")
         Log.printLine(indent + indent + cloudlet.getResourceId + indent + indent + indent + cloudlet.getVmId + indent + indent + dft.format(cloudlet.getActualCPUTime) + indent + indent + dft.format(cloudlet.getExecStartTime) + indent + indent + dft.format(cloudlet.getFinishTime) + indent + indent + ((cloudlet.getCostPerSec)*(cloudlet.getActualCPUTime())))
+        listCost.add(((cloudlet.getCostPerSec)*(cloudlet.getActualCPUTime())))
       }
     })
+    //val sum = prices.foldLeft(0.0)(_ + _)
+    val userCost = listCost.foldLeft(0.0)(_+_)
+    val monthlyCost = inst.getCost
+    Log.printLine("Our Monthly Cost: " + monthlyCost)
+    Log.printLine("Users' Monthly Cost: " + userCost)
   }
 }
