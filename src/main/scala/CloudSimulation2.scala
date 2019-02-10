@@ -120,8 +120,6 @@ object CloudSimulation2 {
     // host storage
     val bw = config.getInt(name+".bw")
 
-    hostList.add(new Host(0, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList))) // This is our machine
-    hostList.add(new Host(1, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
     hostList.add(new Host(2, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
     hostList.add(new Host(3, new RamProvisionerSimple(ram), new BwProvisionerSimple(bw), storage, peList, new VmSchedulerSpaceShared(peList)))
     // 5. Create a DatacenterCharacteristics object that stores the
@@ -186,7 +184,7 @@ object CloudSimulation2 {
     // create VM
     val range = 0 until vmCount
     range.foreach(vmId => {
-      val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared)
+      val vm = new Vm(vmId, brokerId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerSpaceShared)
       // add the VM to the vmList
       vmlist.add(vm)
     })
