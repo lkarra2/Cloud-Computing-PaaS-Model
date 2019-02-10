@@ -1,6 +1,5 @@
 package main.scala
 
-import com.typesafe.config.{Config, ConfigFactory}
 import org.cloudbus.cloudsim.{Cloudlet, DatacenterCharacteristics}
 
 class CostCalculation {

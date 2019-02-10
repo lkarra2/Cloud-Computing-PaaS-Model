@@ -7,6 +7,9 @@
 
 This project consists of 2 Cloud simulations. Each using a different policy with different specifications.
 In order to compare and contrast the differing policies, the cloudlet specifications have been kept constant. 
+
+Since the cloud simulations are providing platform to run any application as a cloudlet by the user, the model being used is, Platform as a Service(PaaS).
+
 The following are the policies for each simulation
 
 Simulation 1:
@@ -54,6 +57,14 @@ Simulation 2:
     - 1000 kbits/s Bandwidth, 
     - Spaceshared scheduler for cloudlets execution
 
+### Results
+
+The success or failure of the simulation can be broken down and understood by analyzing the following characteristics:
+```
+1. If a cloudlet could execute fully within the time taken to run the simulation, SUCCESS is printed by Log
+2. The costs of the User and our cost are printed at the end. If the cost of the user is greater than cost by us, then it is a success.
+```
+The screenshots of the results of both simulations have been added under ./src/res/
 
 ### Prerequisites
 
@@ -93,7 +104,8 @@ Steps to run on IntelliJ
 The tests have been divided in 2 files, TestSimulation1 and TestSimulation2 containing tests of 1 and 2 respectively.
 To run the tests,
 ```
-
+1. Run Tests on IntelliJ OR
+2. run test - on SBT shell
 ```
 
 

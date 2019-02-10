@@ -1,1 +1,21 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/lakshmimanaswi_karra_cs441_hw1_2.12-0.1.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/lakshmimanaswi_karra_cs441_hw1_2.12-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	settings1.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/settings1.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/scala/CloudSimulation1$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main/scala/CloudSimulation1$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/scala/CostCalculation.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main/scala/CostCalculation.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	settings2.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/settings2.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main/scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/scala/CloudSimulation2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main/scala/CloudSimulation2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/scala/CloudSimulation2$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main/scala/CloudSimulation2$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/scala/CloudSimulation1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/manaswikarra/CloudComputing/lakshmimanaswi_karra_cs441_hw1/target/scala-2.12/classes/main/scala/CloudSimulation1.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
