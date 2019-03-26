@@ -1,8 +1,3 @@
-# Homework 1
-#### Description: create cloud simulators for evaluating executions of applications in cloud datacenters with different characteristics and deployment models.
-#### You can obtain this Git repo using the command git clone git@bitbucket.org:cs441_spring2019/homework1.git
-
-
 # Cloud Computing using PaaS service model 
 
 This project consists of 2 Cloud simulations. Each using a different policy with different specifications.
